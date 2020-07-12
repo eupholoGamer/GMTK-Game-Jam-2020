@@ -25,30 +25,15 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI option3;
     public TextMeshProUGUI speech;
 
-    
     // Array to fill with current DialogChoices
     DialogChoices[] currentChoices = new DialogChoices[3];
     DialogChoices selected;
 
     // Array of possible dialog choices
-    DialogChoices[] dialogChoices = { 
-        new DialogChoices("You cheated!", 3, 4, 4, 5, 6), 
-        new DialogChoices("I'm better qualified!", 5, 6, 7, 8, 6), 
-        new DialogChoices("Fine...good luck.", 3, 6, 2, 3, 1),
-        new DialogChoices("Impressive", 3, 6, 2, 3, 1),
-        new DialogChoices("It's still wrong!", 3, 6, 2, 3, 1),
-        new DialogChoices("Alright, let's go in", 3, 6, 2, 3, 1),
-        new DialogChoices("That you do...", 3, 6, 2, 3, 1),
-        new DialogChoices("I don't even get caught...", 3, 6, 2, 3, 1)
-        };
+    DialogChoices[] dialogChoices = { new DialogChoices("TEST1", 1, 4, 1, 2, 3), new DialogChoices("TEST2", 2, 5, 3, 1, 2), new DialogChoices("TEST3", 3, 6, 2, 3, 1)};
 
     // Array of possible speech
-    string[] speeches = {"Alright...you ready? I hate that I'm not the one on the ground...",  
-        "I'm always ready! And you did lose FIVE rounds of Rock Paper Scissors, so...that's how it is!", 
-        "I don't know how but I bet you cheated!", 
-        "I have my ways, it's not my fault you didn't catch me in the moment", 
-        "I'm better qualified! You're terrible at stealth!", 
-        "I'm alright! Besides, I can usually charm my way out."};
+    string[] speeches = {"SPEECHTEST1",  "SPEECHTEST2", "SPEECHTEST3", "SPEECHTEST4", "SPEECHTEST5", "SPEECHTEST6"};
 
     // bool to determine state (true - dialog options, false - speech)
     [SerializeField]
@@ -61,8 +46,8 @@ public class DialogManager : MonoBehaviour
         currentChoices[0] = dialogChoices[0];
         currentChoices[1] = dialogChoices[1];
         currentChoices[2] = dialogChoices[2];
-        selected = new DialogChoices("", 1, 2, 1, 2, 3);
-        speech.text = speeches[0];
+        selected = dialogChoices[0];
+        speech.text = "LET'S-A GO TEST SOME DIALOGUE MAMMA MIA MEAT-A-BALL-A";
 
     }
 
