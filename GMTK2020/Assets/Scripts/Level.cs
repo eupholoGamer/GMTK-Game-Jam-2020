@@ -6,19 +6,19 @@ public class Level : MonoBehaviour {
     [SerializeField] float delayTime = 2f;
 	public void LoadStartMenu()
     {
-        SceneManager.LoadScene(0); 
+        SceneManager.LoadScene("Start Menu"); 
     }
     public void LoadOptionsMenu()
     {
-        SceneManager.LoadScene(1); 
+        SceneManager.LoadScene("Options Menu"); 
     }
     public void LoadAccessibilityMenu()
     {
-        SceneManager.LoadScene(3); 
+        SceneManager.LoadScene("Accessibility Menu"); 
     }
     public void LoadGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level1");
         FindObjectOfType<GameSession>().ResetGame(); 
     }
     public void LoadGameOver()
